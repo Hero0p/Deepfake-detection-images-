@@ -5,21 +5,6 @@ This project implements a Deepfake Image Classification system using ResNet-18 t
 The model is trained on the Deepfake and Real Images Dataset and deployed through a Streamlit frontend for interactive use.
 
 ------------------------------------------------------------
-📁 Folder Structure
-------------------------------------------------------------
-
-Deepfake-Detection/
-│
-├── app.py                      → Streamlit frontend for user interface
-├── deepfake_resnet18.pth       → Trained PyTorch model weights
-├── Dataset/                    → Dataset (contains Train, Validation, Test folders)
-│   └── [Download from Kaggle: https://www.kaggle.com/datasets/manjilkarki/deepfake-and-real-images]
-│
-├── training_notebook.ipynb     → Model training and evaluation code
-├── requirements.txt            → Dependencies list
-└── README.txt                  → Project documentation
-
-------------------------------------------------------------
 📊 Dataset Overview
 ------------------------------------------------------------
 
@@ -28,19 +13,6 @@ Dataset Source: https://www.kaggle.com/datasets/manjilkarki/deepfake-and-real-im
 This dataset consists of manipulated (deepfake) and authentic human face images.
 - Each image is 256×256 JPG.
 - The dataset was further processed for better performance and balance.
-
-Directory structure used for training:
-
-Dataset/
-├── Train/
-│   ├── Fake/
-│   └── Real/
-├── Validation/
-│   ├── Fake/
-│   └── Real/
-└── Test/
-    ├── Fake/
-    └── Real/
 
 ------------------------------------------------------------
 ⚙️ Model Architecture
@@ -88,15 +60,21 @@ Features:
 
 1️⃣ Install dependencies
 -----------------------
+```
 git clone "https://github.com/Hero0p/Deepfake-detection-images-"
+
 pip install -r requirements.txt
+```
 
 2️⃣ Run the Streamlit app
 ------------------------
+```
 streamlit run app.py
-
+```
 If running on Google Colab:
+```
 !streamlit run app.py & npx localtunnel --port 8501
+```
 
 ------------------------------------------------------------
 🧩 Requirements
